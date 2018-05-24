@@ -98,7 +98,7 @@ And this one for n=14:
                 print(b, end='')
         for c in range(1):
             print(" ", end ='')
-        for d in range(k):
+        for d in range(k + 2):
             print('*', end='')
         for e in range(1):
             print(" ", end ='')
