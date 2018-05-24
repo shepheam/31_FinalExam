@@ -19,7 +19,7 @@ def main():
     print()
     print('Un-comment the calls in MAIN one by one')
     print(' to run the testing code as you complete the TODOs.')
-    # run_test_problem1a()
+    run_test_problem1a()
     # run_test_problem1b()
 
 
@@ -90,9 +90,15 @@ def problem1a(numbers):
       :type numbers:  [int]
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
+
+    middle = int(len(numbers) / 2 - (1/2))
+    last = int(len(numbers) - 1)
+    total = numbers[0] + int(numbers[middle]) + int(numbers[last])
+
+    return total
 
 
 def run_test_problem1b():
