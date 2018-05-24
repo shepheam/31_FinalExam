@@ -2,13 +2,13 @@
 Final exam, problem 4.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  May 2018.
+         their colleagues and Ashley Shepherd.  May 2018.
 
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 ###############################################################################
-# TODO: 2.
+# DONE: 2.
 #   In this problem, you will go through the methods of the  Pig  class
 #   that is defined below, one by one, in the order that they appear.
 #   For each method:
@@ -29,6 +29,15 @@ def main():
     #     -- Call each method that you implement below.
     # -------------------------------------------------------------------------
 
+    another_pig = Pig(100)
+    pig = Pig(75)
+
+    pig.get_weight()
+    pig.eat(30)
+    pig.heavier_pig(another_pig)
+    pig.new_pig(another_pig)
+    pig.eat_for_a_year()
+
 
 class Pig(object):
     def __init__(self, weight):
@@ -36,18 +45,24 @@ class Pig(object):
         What comes in:  The Pig's weight (in pounds).
         Side effects: Sets instance variables as needed by the other methods.
         """
-        # TODO: Implement and test this method.
+        # DONE: Implement and test this method.
+        self.weight = weight
 
     def get_weight(self):
         """ Returns this Pig's weight. """
-        # TODO: Implement and test this method.
+        # DONE: Implement and test this method.
+
+        weight = self.get_weight()
+        return weight
 
     def eat(self, pounds_of_slop):
         """
         Increments this Pig's weight by the given pounds_of_slop.
         """
-        # TODO: Implement and test this method.
+        # DONE: Implement and test this method.
+        increment_weight = self.get_weight() + pounds_of_slop
 
+        return increment_weight
     def eat_for_a_year(self):
         """
         Calls the   eat   method as many times as needed to make this Pig:
@@ -58,22 +73,31 @@ class Pig(object):
           -- eat 364 pounds of slop, then
           -- eat 365 pounds of slop.
         """
-        # TODO: Implement and test this method.
+        # DONE: Implement and test this method.
+        for k in range(364):
+            eat = self.eat(k)
 
     def heavier_pig(self, other_pig):
         """
         Returns either this Pig object or the other given Pig object,
         whichever is heavier.
         """
-        # TODO: Implement and test this method.
+        # DONE: Implement and test this method.
+        pig = self.get_weight()
+        if pig > other_pig:
+            return pig
+        else:
+            return other_pig
 
     def new_pig(self, other_pig):
         """
         Returns a new Pig whose weight is the weight of the heavier
           of this Pig and the other_Pig.
         """
-        # TODO: Implement and test this method.
+        # DONE: Implement and test this method.
 
+        heavy_pig = self.heavier_pig(other_pig)
+        return heavy_pig
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
