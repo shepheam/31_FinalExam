@@ -408,10 +408,10 @@ def problem2c(x):
     # -------------------------------------------------------------------------
 
     while True:
-        if is_prime(x):
+        if is_prime(x) is True:
             if is_prime(sum_of_digits(x)) >= x is True:
                 return x
-            x = x + 1
+        x = x + 1
 
     #total = 0
     #if is_prime(x) is True:
