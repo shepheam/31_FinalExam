@@ -403,22 +403,16 @@ def problem2c(x):
       :type x:    int
     """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
     while True:
         if is_prime(x) is True:
-            if is_prime(sum_of_digits(x)) >= x is True:
+            if is_prime(sum_of_digits(x)) is True:
                 return x
         x = x + 1
 
-    #total = 0
-    #if is_prime(x) is True:
-     #   for k in range(sum_of_digits(x)):
-      #      total = total + x[k]
-    #if is_prime(total) is True:
-     #   return total
 
 
 ###############################################################################
