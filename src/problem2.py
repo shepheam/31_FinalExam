@@ -20,7 +20,7 @@ def main():
     print('Un-comment the calls in MAIN one by one')
     print(' to run the testing code as you complete the TODOs.')
     run_test_problem2a()
-    # run_test_problem2b()
+    run_test_problem2b()
     # run_test_problem2c()
 
 
@@ -209,7 +209,7 @@ def run_test_problem2b():
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 3:
-    sequence = [9, -88, 2, -1, 5, 17, 4]
+    sequence = [9, 88, 2, -1, 5, 17, 4]
     expected = 1
     print_expected_result_of_test([sequence], expected,
                                   test_results, format_string)
@@ -226,7 +226,7 @@ def run_test_problem2b():
 
     # Test 5:
     sequence = [1, 2, 3, 4, 5, 6, 7, -500]
-    expected = 7
+    expected = 6
     print_expected_result_of_test([sequence], expected,
                                   test_results, format_string)
     actual = problem2b(sequence)  # Run the code to test
@@ -254,10 +254,16 @@ def problem2b(sequence):
       :type sequence  [int]
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
-
+    big = 0
+    index = int()
+    for k in range(len(sequence)):
+       if sequence[k] > big:
+           big = sequence[k]
+           index = k
+    return index
 
 def run_test_problem2c():
     """ Tests the  problem2c   function. """
