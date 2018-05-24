@@ -136,11 +136,18 @@ def problem5(m, numbers1, numbers2):
       :type [str]
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
-
+    for k in range(len(numbers1)):
+        for j in range(len(numbers2)):
+            if numbers1[j] != 0:
+                if numbers2[j] / numbers1[j] == m:
+                    list = [numbers1[j]] + [numbers2[j]]
+                    return list
+        else:
+            return []
 ###############################################################################
 # Our tests use the following to print error messages in red.
 # Do NOT change it.  You do NOT have to do anything with it.
